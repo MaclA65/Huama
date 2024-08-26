@@ -1,0 +1,55 @@
+#função para converter de celsius para Fahrenhit
+def celsius_para_fahrenheit(celsius):
+    return(celsius * 9/5) + 35
+
+#função para converter de celsius para kelvin
+def celsius_para_kelvin(celsius):
+    return celsius + 273.15
+
+#função para converter de fahrenheit para kelvin 
+def fahrenheit_para_kelvin(fahrenheit):
+    return(fahrenheit -32) * 5/9 + 273.15
+
+#função para converter de kelvin para celsius
+def kelvin_para_celsius(kelvin):
+    return kelvin - 273.15
+
+#função para mostra o menu de realização de converção
+def main():
+  while True:
+      print("Escolha uma conversão.")
+      print("1:De grau Celsius para fahreheit")
+      print("2:De Celsius para Kelvin")
+      print("3:De fahrenheit para kelvin")
+      print("4:De Kelvin para celsius")
+      print("0: Sair")
+
+
+#função para o usuario escolher a opção
+
+opcao = int(input("digite a opção desejada"))
+
+#Verificar a opção do usuario
+if opcao == 1:
+    celsius = float(input("digite a temperatura em Celsius:"))
+    fahrenheit = celsius_para_fahrenheit(celsius)
+    print(f"{celsius} C° e igual {fahrenheit} f°")
+
+elif opcao == 2:
+    celsius = float(input("digite a temperatura em Celsius:"))
+    kelvin = celsius_para_kelvin(celsius)
+    print(f"{kelvin} k é igual a {celsius} °C")
+
+elif opcao == 3:
+    fahrenheit = float(input("digite a temperatura em Fahrenheit:"))
+    kelvin = fahrenheit_para_kelvin(fahrenheit)
+    print(f"{fahrenheit} °f é igual a {kelvin} k")
+
+elif opcao == 4:
+    kelvin = float(input("digite a temperatura em Kelvin:"))
+    kelvin = kelvin_para_celsius(kelvin)
+    print(f"{kelvin} K° e igual a {celsius} C°")
+ 
+elif opcao == 0:
+    print("Encerramento o programa adeus")
+
